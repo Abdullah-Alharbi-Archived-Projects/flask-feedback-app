@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- {# style here #} -->
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>
+      {% if title %}
+      {{ title }}
+      {%else%} Please rate your service {%endif%}
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- logo here -->
+      {% if message %}
+      <p class="validation-message">
+        {{ message | safe }}
+      </p>
+      {% endif %} {% block content %}{% endblock content %}
+    </div>
+  </body>
+</html>
